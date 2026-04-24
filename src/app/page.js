@@ -33,7 +33,7 @@ export default function home() {
     )
   };
 
- return (
+  return (
     <div className={styles.div_wrapper}>
       {products.map((product) => (
         <div className={styles.div_products} key={product.id}>
