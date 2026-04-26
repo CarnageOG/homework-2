@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import styles from "./page.module.css";
+import ProductItem from "../components/ProductItem/ProductItem";
 import { useState, useEffect } from "react";
 
 export default function home() {
@@ -35,6 +36,9 @@ export default function home() {
 
   return (
     <div className={styles.div_wrapper}>
+      {products.map((product) => (
+        <ProductItem key={product.id} product={product} />
+      ))}
     </div>
   );
 }
